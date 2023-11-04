@@ -1,6 +1,7 @@
 use regex::Regex;
 use std::io::{self, BufRead};
 
+#[allow(unused_assignments)]
 fn interpret_program(prog: Vec<&str>, debug: bool) -> String {
     let mut buffer = String::new();
 
