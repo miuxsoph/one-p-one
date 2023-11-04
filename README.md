@@ -8,8 +8,6 @@ Run this interpreter from the command line using the following format: `cargo ru
 
 Example:
 Binary Incrementor
-
-This interpreter includes the Binary Incrementor example, a conversion of the Thue example. The script format is as follows:
 ````
 1|_11_
 2|1_|1++|2|3
