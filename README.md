@@ -9,7 +9,7 @@ Run this interpreter from the command line using the following format: `cargo ru
 This interpreter will run all txt files in main directory.
 
 Example:
-Binary Incrementor
+Binary Incrementer
 ````
 1|_11_
 2|1_|1++|2|3
