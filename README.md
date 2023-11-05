@@ -6,7 +6,7 @@ For further details, refer to: https://esolangs.org/wiki/1.1
 
 Run this interpreter from the command line using the following format: `cargo run`
 
-To run all .txt programs in the main directory: `cargo run all`
+This interpreter will run all txt files in main directory.
 
 Example:
 Binary Incrementor
