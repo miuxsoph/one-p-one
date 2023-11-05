@@ -18,6 +18,6 @@ Binary Incrementor
 5|11++|1++0|5|6
 6|_0|_|6|7
 7|_1++|10|7|8
-8|HAL
+8|HALT
 ````
 Credit goes to: https://github.com/Sxakalo/1.1-Lang for Perl implementation
