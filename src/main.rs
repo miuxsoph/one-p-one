@@ -1,10 +1,10 @@
+
 use regex::Regex;
 use std::fs;
-use std::env;
 use std::io::{self, BufRead};
 
-#[allow(unused_assignments)]
 fn interpret_program(prog: Vec<&str>, debug: bool) -> String {
+    #[allow(unused_assignments)]
     let mut buffer = String::new();
 
     // Set buffer to start
@@ -57,31 +57,7 @@ fn interpret_program(prog: Vec<&str>, debug: bool) -> String {
         }
     }
 
-    buffer
-}
-
-fn run_for_single_file() {
-    let mut file_path = String::new();
-
-    println!("Enter the file name (including the .txt extension):");
-    io::stdin().read_line(&mut file_path)
-        .expect("Failed to read line");
-
-    let file_path = file_path.trim();
-
-    let file_content = match fs::read_to_string(&file_path) {
-        Ok(content) => content,
-        Err(_) => {
-            eprintln!("File not found or cannot be opened.");
-            return;
-        }
-    };
-
-    let prog: Vec<&str> = file_content.lines().collect();
-    let debug = false; // Set debug mode if needed
-
-    let result = interpret_program(prog, debug);
-    println!("{}", result);
+        buffer
 }
 
 fn run_for_all_files() {
@@ -109,16 +85,10 @@ fn run_for_all_files() {
         let debug = false; // Set debug mode if needed
 
         let result = interpret_program(prog, debug);
-        println!("Result for {}: {}", file.display(), result);
+        println!("{}", result);
     }
 }
 
 fn main() {
-    let args: Vec<String> = env::args().collect();
-
-    if args.len() == 2 && args[1] == "all" {
-        run_for_all_files();
-    } else {
-        run_for_single_file();
-    }
+    run_for_all_files();
 }
